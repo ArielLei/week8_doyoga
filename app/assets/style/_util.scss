@@ -1,0 +1,130 @@
+// text style
+
+.italic{
+  font-style: italic;
+}
+
+.uppercase{
+  text-transform:uppercase;
+}
+
+.text-white{
+  color: white;
+}
+
+.text-black{
+  color: black;
+}
+
+.text-primary{
+  color: $color-primary;
+}
+
+.text-secondary{
+  color: $color-secondary;
+}
+
+.text-center{
+  text-align: center;
+}
+
+// 字重
+.fw-light{
+  font-weight: 200;
+}
+
+.fw-regular{
+  font-weight: 300;
+}
+
+.fw-medium{
+  font-weight: 500;
+}
+
+.m-auto{
+  margin: auto;
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.auto-height{
+  height: 100%;
+}
+
+// 顯示
+
+.d-none{
+  display: none !important;
+}
+
+.d-block{
+  display: block;
+}
+
+.inline-block{
+  display: inline-block;
+}
+
+// flex
+.d-flex{
+  display: flex;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; //多行
+}
+
+//決定軸線方向
+.column{
+  flex-direction: column;  //從上到下，再由左到右
+}
+
+.column-reverse{
+  flex-direction:column-reverse;
+}
+
+.row-reverse{
+  flex-direction:row-reverse;
+}
+
+//主軸對齊
+.justify-center{
+  justify-content: center; //水平置中
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.justify-around{
+  justify-content: space-around;
+}
+
+.justify-end{
+  justify-content: flex-end; //對齊最左邊的 main end
+}
+
+//交錯軸單行對齊
+.items-center{
+  align-items: center; //垂直置中
+}
+
+.items-start{
+  align-items: flex-start; //對齊最上面的 cross start
+}
+
+.items-end{
+  align-items: flex-end; //對齊最上面的 cross start
+}
+
+//交錯軸多行對齊
+.content-start{
+  align-content: flex-start; //對齊最上面的 cross start
+}
+
+.content-center{
+  align-content: center; //對齊最上面的 cross start
+}

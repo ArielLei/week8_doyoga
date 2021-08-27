@@ -1,0 +1,290 @@
+body{
+  font-family: $font-family;
+}
+
+.container {
+  max-width: 1140px; //1110 + 30 gutter
+  margin: 0 auto;
+  @include tablet {
+    max-width: 720px;
+  }
+  @include phone {
+    max-width: 345px;
+  }
+}
+
+.title{
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  color: $color-secondary;
+}
+
+.subtitle{
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 32px;
+  color: $color-primary;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 8px 16px;
+    font-size: 20px;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    min-width: 112px;
+    height: 46px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: $color-primary;
+  &:hover{
+    background-color: $color-secondary;
+  }
+}
+
+.btn-light {
+  color: $color-dark;
+  background-color: $color-light;
+  &:hover{
+    color: #fff;
+    background-color: $color-primary;
+  }
+}
+
+.btn-arrow{
+  color: $color-secondary;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  &::after{
+    font-family: "Material Icons";
+    content: "\e941";
+    margin-left: 8px;
+    font-size: 24px;
+  }
+  &:hover{
+    color: $color-primary;
+  }
+}
+
+header{
+  background-color: $color-light;
+  padding: 20px 5%;
+  justify-content: space-between;
+  align-items: center;
+  nav{
+    display:flex;
+    justify-content: space-between;
+    width:60%;
+    z-index: 9999;
+    @include tablet {
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+		width: 100%;
+		height: calc(100vh - 70px);
+		background-color: $color-secondary;
+		top: 70px;
+    padding-top:30px;
+		left: -100%;
+		transition: 0.5s;
+    font-size:20px;
+    }
+  }
+}
+
+header nav.active{
+  left: 0;
+}
+
+.logo a{
+  font-family: Silom;
+  font-size: 24px;
+  color:$color-primary;
+}
+
+// 選單
+header nav ul{
+	margin: 0;
+  display:flex;
+  @include tablet {
+		text-align: center;
+    flex-direction: column;
+  }
+}
+header nav ul li a{
+	padding:8px 16px;
+	color:$color-dark;
+	text-decoration: none;
+	display: block;
+  transition: 0.5s;
+  @include tablet {
+		color:#fff;
+    margin-bottom:16px;
+  }
+	&:hover{
+		color: $color-primary;
+	}
+}
+
+.menu-toggle{
+	display: none;
+	color: $color-primary;
+	float: right;
+	line-height: 50px;
+	cursor: pointer;
+  @include tablet {
+    display: flex;
+  }
+  .material-icons{
+    font-size:33px;
+  }
+}
+
+header .topLink li a{
+  color:$color-secondary;
+  border:1px solid $color-secondary;
+  border-radius: 16px;
+  margin:0 8px;
+  transition: 0.5s;
+  &:hover{
+    background-color:$color-secondary;
+    color:#fff;
+  }
+  @include tablet {
+		color:#fff;
+    margin-bottom:16px;
+    border:1px solid #fff;
+    margin:8px 20%;
+    &:hover{
+      background-color:#fff;
+      color:$color-secondary;
+    }
+  }
+}
+
+
+footer{
+  padding:32px 0;
+  background-color: $color-secondary;
+  a{
+    color: #fff;
+  }
+}
+
+.footerTop{
+  border-bottom:1px solid #fff;
+  padding-bottom:32px;
+  margin-bottom:32px;
+  @include tablet {
+    padding-bottom:24px;
+  }
+}
+
+.subscribe{
+  justify-content: space-between;
+  @include tablet {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .input-group{
+    background-color:#fff;
+    border-radius: 4px;
+    height:45px;
+    width:350px;
+    @include tablet {
+      margin-top:8px;
+    }
+  }
+  p{
+    font-size:28px;
+    @include phone {
+      font-size:24px;
+    }
+  }
+  input{
+    height:44px;
+    width:278px;
+    padding:0px 16px;
+    font-size:20px;
+    color:$color-secondary;
+    border: 0;
+    outline-color: $color-secondary;
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    &::placeholder {
+      color:$color-secondary;
+    }
+  }
+  button{
+    height:45px;
+    cursor: pointer;
+    padding:8px 16px;
+    border: 0;
+    font-size:20px;
+    color:#fff;
+    background-color:$color-primary;
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    float: right;
+  }
+}
+
+.footerLogo a{
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.footerNav{
+  li a{
+    margin-bottom: 8px;
+    &:hover{
+		color: $color-primary;
+	 }
+  }
+}
+
+.social{
+  img{
+    width: 24px;
+    margin-left: 8px;
+  }
+}
+
+.footerBottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  @include phone {
+    flex-direction: column;
+    align-items: flex-start
+  }
+}
+
+.contact{
+  position: fixed;
+  z-index: 9000;
+  right:16px;
+  top:50%;
+  li{
+    margin-bottom: 8px;
+  }
+}
