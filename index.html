@@ -1,8 +1,62 @@
----
-title: DOYOGA，做你的瑜珈
-layout: ./app/layout.ejs
-engine: ejs
----
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DOYOGA，做你的瑜珈</title>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
+  <!-- JQ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- google Icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <!-- 思源黑體 -->
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'wbm5gsk',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <!-- silom LOGO字型 -->
+  <link href="http://fonts.cdnfonts.com/css/silom" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/style/all.css">
+  <script src="./assets/js/all.js"></script>
+</head>
+<body>
+<header class="d-flex">
+  <div class="logo"><a href="index.html">DOYOGA</a></div>
+  <nav>
+		<ul class="fw-light">
+			<li><a href="#">課程介紹</a></li>
+			<li><a href="#">瑜珈空間</a></li>
+			<li><a href="#">當月課表</a></li>
+		</ul>
+    <ul class="topLink fw-regular">
+			<li><a href="#">立即預約</a></li>
+			<li><a href="#">聯絡我們</a></li>
+		</ul>
+	</nav>
+	<div class="menu-toggle">
+    <span class="material-icons">menu</span>
+	</div>
+</header>
+
+<div class="contact">
+  <ul>
+    <li><a href="#"><img src="./assets/images/icon-fb_c.svg" alt="fb"></a></li>
+    <li><a href="#"><img src="./assets/images/icon-ig_c.svg" alt="ig"></a></li>
+    <li><a href="#"><img src="./assets/images/icon-line_c.svg" alt="line"></a></li>
+  </ul>
+</div>
+
 
 <!-- 大圖 -->
 <div class="banner">
@@ -284,3 +338,38 @@ engine: ejs
 
 
 
+
+
+<footer class="footer text-white">
+ <div class="footerTop">
+  <div class="container subscribe d-flex">
+    <p class="fw-medium">現在訂閱，獲得課程優惠碼！</p>
+    <div class="input-group">
+      <input type="text" placeholder="輸入您的電子信箱" aria-label="輸入您的電子信箱">
+      <button type="button">訂閱</button>
+    </div>
+  </div>
+ </div>
+</div>
+ <div class="container">
+  <div class="d-flex justify-between">
+  <div class="logo footerLogo"><a href="">DOYOGA</a></div>
+  <ul class="social d-flex">
+    <li><a href="#"><img src="./assets/images/icon-fb.svg" alt="fb"></a></li>
+    <li><a href="#"><img src="./assets/images/icon-ig.svg" alt="ig"></a></li>
+    <li><a href="#"><img src="./assets/images/icon-line.svg" alt="line"></a></li>
+  </ul>
+ </div>
+ <div class="footerBottom">
+  <ul class="footerNav fw-light">
+    <li><a href="#">課程介紹</a></li>
+    <li><a href="#">瑜珈空間</a></li>
+    <li><a href="#">當月課表</a></li>
+  </ul>
+  <p class="copyright fw-light">© 2021. All Rights Reserved.</p>
+  <div></div>
+ </div>
+</div>
+</footer>
+</body>
+</html>
